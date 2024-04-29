@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
+import java.time.LocalDateTime;
 
 @Component
 @Data
@@ -22,10 +23,12 @@ public class PlayerDto {
     private String joinYyyy;
     private String nation;
     private String birthDate;
-    private Long teamId;
     private String backNo;
     private String position;
     private String solar;
     private String height;
     private String weight;
+    private Long teamId;
+    private LocalDateTime redDate;
+    private LocalDateTime modDate;
 }
