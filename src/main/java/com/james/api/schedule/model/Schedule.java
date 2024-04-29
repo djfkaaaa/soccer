@@ -38,5 +38,5 @@ public class Schedule extends BaseEntitiy {
 
     @ManyToOne
     @JoinColumn(name="stadium_id",foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT))
-    private Stadium stadiumId;
+    private Stadium stadium;
 }

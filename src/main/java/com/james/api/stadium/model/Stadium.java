@@ -28,8 +28,8 @@ public class Stadium {
    private String address;
    private String ddd;
    private String tel;
-   @OneToMany(mappedBy = "team_id")
+   @OneToMany(mappedBy = "stadium")
    private List<Team> team;
-   @OneToMany(mappedBy = "schedule")
+   @OneToMany(mappedBy = "stadium")
    private List<Schedule> schedule;
 }

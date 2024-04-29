@@ -44,6 +44,7 @@ public class Team extends BaseEntitiy {
     private List<Player> player;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "stadium_id", nullable = true, foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT))
-    private Stadium stadiumId;
+    @JoinColumn(name = "stadium_id", nullable = true,
+            referencedColumnName = "stadium_id",foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT))
+    private Stadium stadium;
 }
