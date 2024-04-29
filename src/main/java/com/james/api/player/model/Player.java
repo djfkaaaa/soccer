@@ -22,17 +22,17 @@ public class Player extends BaseEntitiy {
     private String nikeName;
     @Column(name = "join_yyyy")
     private String joinYyyy;
-    private String position;
     @Column(name = "back_no")
-    private String backNo;
     private String nation;
     @Column(name = "birth_date")
     private String birthDate;
+    @Column(name = "team_id")
+    private Long teamId;
+    private String backNo;
+    private String position;
     private String solar;
     private String height;
     private String weight;
-    @Column(name = "team_id")
-    private Long teamId;
 
 }
 
