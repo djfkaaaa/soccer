@@ -1,5 +1,6 @@
 package com.james.api.player.model;
 import com.james.api.common.BaseEntitiy;
+import com.james.api.team.model.Team;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -43,7 +44,8 @@ public class Player extends BaseEntitiy {
 
     private String weight;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "team_id", nullable = true, referencedColumnName = "teamId", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT))
+    private Team teamId;
+
 }
-
-
-
