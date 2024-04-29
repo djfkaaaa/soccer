@@ -1,10 +1,11 @@
 package com.james.api.stadium.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.james.api.schedule.model.Schedule;
+import com.james.api.team.model.Team;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity(name = "stadium")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -16,11 +17,19 @@ public class Stadium {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long stadium_id;
-   private String  stadium_name;
-   private Long hometeam_id;
-   private String seat_count;
+   @Column(name = "stadium_id")
+   private Long stadiumId;
+   @Column(name = "stadium_name")
+   private String  stadiumName;
+   @Column(name = "hometeam_id")
+   private Long hometeamId;
+   @Column(name = "seat_count")
+   private String seatCount;
    private String address;
    private String ddd;
    private String tel;
+   @OneToMany(mappedBy = "team")
+   private List<Team> team;
+   @OneToMany(mappedBy = "schedule")
+   private List<Schedule> schedule;
 }
