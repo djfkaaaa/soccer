@@ -1,4 +1,4 @@
-select * from  players;
+select * from players;
 
 
 -- CREATE TABLE stadium (
