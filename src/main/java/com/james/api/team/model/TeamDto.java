@@ -5,6 +5,8 @@ import lombok.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -25,5 +27,7 @@ public class TeamDto {
     private String fax;
     private String homepage;
     private String owner;
+    private LocalDateTime regDate;
+    private LocalDateTime modDate;
 
 }

@@ -1,8 +1,13 @@
 package com.james.api.team.model;
 
+import com.james.api.common.BaseEntitiy;
+import com.james.api.player.model.Player;
+import com.james.api.stadium.model.Stadium;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.extern.log4j.Log4j2;
+
+import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -11,7 +16,7 @@ import lombok.extern.log4j.Log4j2;
 @Builder
 @Entity(name = "teams")
 @Log4j2
-public class Team {
+public class Team extends BaseEntitiy {
     @Id
     @Column(name = "team_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,8 +29,6 @@ public class Team {
     private String eTeamName;
     @Column(name = "origin_year")
     private String originYear;
-    @Column(name = "stadium_id")
-    private Long stadiumId;
     @Column(name = "zip_code1")
     private String zipCode1;
     @Column(name = "zip_code2")
@@ -37,4 +40,10 @@ public class Team {
     private String homepage;
     private String owner;
 
+    @OneToMany(mappedBy = "player")
+    private List<Player> player;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "stadium_id", nullable = true, referencedColumnName = "stadiumId", foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT))
+    private Stadium stadiumId;
 }
