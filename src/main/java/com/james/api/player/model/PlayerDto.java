@@ -16,7 +16,6 @@ import java.time.LocalDateTime;
 @Log4j2
 
 public class PlayerDto {
-
     private Long id;
     private String playerName;
     private String ePlayerName;
@@ -24,12 +23,12 @@ public class PlayerDto {
     private String joinYyyy;
     private String nation;
     private String birthDate;
-    private Long teamId;
     private String backNo;
     private String position;
     private String solar;
     private String height;
     private String weight;
-    private LocalDateTime regDate;
+    private Long teamId;
+    private LocalDateTime redDate;
     private LocalDateTime modDate;
 }

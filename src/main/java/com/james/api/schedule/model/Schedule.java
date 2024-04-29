@@ -1,6 +1,7 @@
 package com.james.api.schedule.model;
 
 import com.james.api.common.BaseEntitiy;
+import com.james.api.stadium.model.Stadium;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -35,6 +36,7 @@ public class Schedule extends BaseEntitiy {
     @Column(name = "away_score")
     private String awayScore;
 
-    @Column(name="stadium_id")
-    private Long stadiumId;
+    @ManyToOne
+    @JoinColumn(name="stadium_id",foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT))
+    private Stadium stadiumId;
 }

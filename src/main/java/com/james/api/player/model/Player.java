@@ -11,7 +11,6 @@ import lombok.*;
 @Entity(name="players")
 
 public class Player extends BaseEntitiy {
-
     @Id
     @Column(name = "player_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
