@@ -1,11 +1,13 @@
-package com.james.api.crawler;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
-public class CrawlerController {
+//package com.james.api.crawler;
+//import java.io.IOException;
+//import java.util.HashMap;
+//import java.util.Map;
+//import java.util.Scanner;
+//
+//public class CrawlerController {
 //    private CrawlerServiceImpl crawlerService = CrawlerServiceImpl.getInstance();
+//
+//
 //
 //
 //    public Map<String,?> findBugsMusic(Scanner sc) throws IOException {
@@ -24,4 +26,4 @@ public class CrawlerController {
 //
 //        return crawlerService.findNamesFromWebMelon(paraMap);
 //    }
-}
+//}
