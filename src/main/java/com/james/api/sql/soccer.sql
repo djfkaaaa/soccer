@@ -1,4 +1,6 @@
 select * from players;
+
+
 -- CREATE TABLE stadium (
 --     id int not null auto_increment,
 --     stadium_name VARCHAR(40),
@@ -63,3 +65,12 @@ select * from players;
 --     FOREIGN KEY(team_id) REFERENCES team(id)
 --     )DEFAULT CHARSET=utf8;
 -- );
+
+
+
+
+
+
+
+
+

@@ -14,8 +14,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Log4j2
-public class PlayerDto {
 
+public class PlayerDto {
     private Long id;
     private String playerName;
     private String ePlayerName;
@@ -32,3 +32,9 @@ public class PlayerDto {
     private LocalDateTime redDate;
     private LocalDateTime modDate;
 }
+
+
+
+
+
+

@@ -48,9 +48,3 @@ public class Player extends BaseEntitiy {
     private Team teamId;
 
 }
-
-
-
-
-
-

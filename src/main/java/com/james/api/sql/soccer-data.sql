@@ -1,5 +1,3 @@
-select * from players;
-
 -- DROP TABLE if exists player;
 -- DROP TABLE if exists SCHEDULE;
 -- DROP TABLE if exists team;
